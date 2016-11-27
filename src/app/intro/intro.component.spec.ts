@@ -1,9 +1,15 @@
-import { TestBed }               from '@angular/core/testing';
-import { IntroComponent }        from './intro.component';
+import { TestBed }        from '@angular/core/testing';
+import { IntroComponent } from './intro.component';
+import { NameComponent }  from '../name/name.component';
 
 describe('Intro', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ declarations: [IntroComponent]});
+    TestBed.configureTestingModule({
+      declarations: [
+        IntroComponent,
+        NameComponent
+      ]
+    });
   });
 
   it ('should work', () => {
@@ -16,16 +22,15 @@ describe('Intro', () => {
   it ('shows the mug shot', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.alex-miller-mug');
-    // let styles   = window.getComputedStyle(element);
 
     expect(element).not.toBeNull();
   });
 
   it ('shows the name', () => {
     let fixture = TestBed.createComponent(IntroComponent);
-    let element = fixture.nativeElement.querySelector('.name');
+    let element = fixture.nativeElement.querySelector('name');
 
-    expect(element.innerText).toMatch('ALEX MILLER');
+    expect(element.innerText).not.toBeNull();
   });
 
   it ('shows the bio', () => {

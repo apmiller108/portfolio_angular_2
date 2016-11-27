@@ -1,10 +1,17 @@
-import { TestBed }      from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed }        from '@angular/core/testing';
+import { AppComponent }   from './app.component';
 import { IntroComponent } from './intro/intro.component';
+import { NameComponent }  from './name/name.component';
 
 describe('App', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ declarations: [AppComponent, IntroComponent]});
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent,
+        IntroComponent,
+        NameComponent
+      ]
+    });
   });
 
   it ('should work', () => {

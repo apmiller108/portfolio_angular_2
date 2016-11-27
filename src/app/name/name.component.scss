@@ -1,0 +1,73 @@
+@import '../../assets/styles/variables';
+
+.name-container {
+  div {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  div:nth-child(1) {
+    text-align: right
+  }
+  div:nth-child(2) {
+    text-align: left
+  }
+}
+
+.polygons {
+  margin: 0 auto;
+  max-width: 500px;
+  height: 200px;
+  position: relative;
+  div {
+    position: absolute;
+    width: 100%; 
+    height: 200px;
+    top: 0; 
+    left: 0;
+    -webkit-clip-path: polygon(50% 95%, 50% 95%, 50% 95%);
+    transition: 0.7s cubic-bezier(.52,.01,.16,1);
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        $tdelay: ((($i*0.1))+0.2s);
+        $tduration: ($i*0.05 + 0.5s);
+        transition-delay: $tdelay;				        
+        transition-duration: $tduration;   
+      }
+    }
+  }
+  div:nth-child(1) {
+    -webkit-clip-path: polygon(30% 59%, 26% 15%, 5% 95%);
+    background-color: $blue;
+  }
+  div:nth-child(2) {
+    -webkit-clip-path: polygon(25% 62%, 26% 15%, 50% 95%);
+    background-color: $blue;
+  }
+  div:nth-child(3) {
+    -webkit-clip-path: polygon(77% 38%, 61% 15%, 50% 95%);
+    background-color: $red;
+  }
+  div:nth-child(4) {
+    -webkit-clip-path: polygon(71% 30%, 83% 15%, 93% 95%);
+    background-color: $red;
+  }
+
+  &:hover {
+    div:nth-child(4) {
+      -webkit-clip-path: polygon(30% 59%, 26% 15%, 5% 95%);
+      background-color: $red;
+    }
+    div:nth-child(1) {
+      -webkit-clip-path: polygon(25% 62%, 26% 15%, 50% 95%);
+      background-color: $red;
+    }
+    div:nth-child(2) {
+      -webkit-clip-path: polygon(77% 38%, 61% 15%, 50% 95%);
+      background-color: $blue;
+    }
+    div:nth-child(3) {
+      -webkit-clip-path: polygon(71% 30%, 83% 15%, 93% 95%);
+      background-color: $blue;
+    }
+  }
+}

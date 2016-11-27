@@ -3,12 +3,14 @@ import { BrowserModule }  from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 import { IntroComponent } from './intro/intro.component';
+import { NameComponent }  from './name/name.component';
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    IntroComponent
+    IntroComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule
