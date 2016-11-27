@@ -16,10 +16,9 @@ describe('Intro', () => {
   it ('shows the mug shot', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.alex-miller-mug');
-    let styles   = window.getComputedStyle(element);
+    // let styles   = window.getComputedStyle(element);
 
     expect(element).not.toBeNull();
-    expect(styles.getPropertyValue('background-image')).not.toBe('none');
   });
 
   it ('shows the name', () => {
@@ -33,7 +32,7 @@ describe('Intro', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.bio');
 
-    expect(element.innerText).toBe(
+    expect(element.innerText).toEqual(
       'I build applications in Ruby on Rails and AngularJS in TDD style. ' +
       'I like learning new things, which lately has been Elixir, Phoenix and ' +
       'Angular 2.'
@@ -44,7 +43,7 @@ describe('Intro', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.github');
 
-    expect(element.href).toBe('https://github.com/apmiller108');
+    expect(element.href).toEqual('https://github.com/apmiller108');
   });
 
   it ('links to linkedin', () => {
@@ -57,6 +56,13 @@ describe('Intro', () => {
   it ('links to the blog', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.linkedin');
+
+    expect(element).not.toBeNull();
+  });
+
+  it ('link to open source projects', () => {
+    let fixture = TestBed.createComponent(IntroComponent);
+    let element = fixture.nativeElement.querySelector('.open-source');
 
     expect(element).not.toBeNull();
   });

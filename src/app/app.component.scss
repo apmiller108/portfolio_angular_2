@@ -1,7 +1,9 @@
-body {
-  font-family: Helvetica;
-}
+// Vendors
+@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
 
-h1, h2 {
-  color: #383D3B;
-}
+// Variables
+@import '../assets/styles/variables';
+
+// Typography
+@import '../assets/styles/typography';
+
