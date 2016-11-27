@@ -19,13 +19,6 @@ describe('Intro', () => {
     .toBe(true, 'should create IntroComponent');
   });
 
-  it ('shows the mug shot', () => {
-    let fixture = TestBed.createComponent(IntroComponent);
-    let element = fixture.nativeElement.querySelector('.alex-miller-mug');
-
-    expect(element).not.toBeNull();
-  });
-
   it ('shows the name', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('name');

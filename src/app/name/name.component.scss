@@ -42,6 +42,7 @@
   div:nth-child(2) {
     -webkit-clip-path: polygon(25% 62%, 26% 15%, 50% 95%);
     background-color: $blue;
+    opacity: 0.8;
   }
   div:nth-child(3) {
     -webkit-clip-path: polygon(77% 38%, 61% 15%, 50% 95%);
@@ -50,6 +51,7 @@
   div:nth-child(4) {
     -webkit-clip-path: polygon(71% 30%, 83% 15%, 93% 95%);
     background-color: $red;
+    opacity: 0.8;
   }
 
   &:hover {
