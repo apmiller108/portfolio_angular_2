@@ -6,7 +6,7 @@ describe('Name', () => {
     TestBed.configureTestingModule({ declarations: [OpenSourceComponent]});
   });
 
-  it ('should work', () => {
+  it ('is created', () => {
     let fixture = TestBed.createComponent(OpenSourceComponent);
 
     expect(fixture.componentInstance instanceof OpenSourceComponent)
@@ -18,5 +18,46 @@ describe('Name', () => {
     let element = fixture.nativeElement.querySelector('a[routerlink="/"]');
 
     expect(element.innerText).toMatch('back');
+  });
+
+  it ('has a title link to Angular 2 Webpack Starter repo', () => {
+    let fixture = TestBed.createComponent(OpenSourceComponent);
+    let element = fixture.nativeElement.querySelector(
+      'h2 > a[href="https://github.com/apmiller108/angular2_webpack_starter"]'
+    );
+
+    expect(element.innerText).toMatch('Angular 2 Webpack Starter');
+  });
+
+  it ('has a title link to Google Sheets Appendroid ruby gem page', () => {
+    let fixture = TestBed.createComponent(OpenSourceComponent);
+    let element = fixture.nativeElement.querySelector(
+      'h2 > a[href="https://rubygems.org/gems/google_sheets_appendroid"]'
+    );
+
+    expect(element.innerText).toMatch('Google Sheets Appendroid');
+  });
+
+  it ('has a title link to Locotimezone ruby gem page', () => {
+    let fixture = TestBed.createComponent(OpenSourceComponent);
+    let element = fixture.nativeElement.querySelector(
+      'h2 > a[href="https://rubygems.org/gems/locotimezone"]'
+    );
+
+    expect(element.innerText).toMatch('Locotimezone');
+  });
+
+  it('has links to the repos for each project', () => {
+    let fixture = TestBed.createComponent(OpenSourceComponent);
+    let elements = fixture.nativeElement.querySelectorAll(
+      '.open-source > div > a'
+    );
+
+    expect(elements['0'].getAttribute('href')).
+      toMatch('https://github.com/apmiller108/angular2_webpack_starter');
+    expect(elements['1'].getAttribute('href')).
+      toMatch('https://github.com/apmiller108/google_sheets_appendroid');
+    expect(elements['2'].getAttribute('href')).
+      toMatch('https://github.com/apmiller108/locotimezone');
   });
 });
