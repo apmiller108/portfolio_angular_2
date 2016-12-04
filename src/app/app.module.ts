@@ -6,6 +6,7 @@ import { AppComponent }         from './app.component';
 import { IntroComponent }       from './intro/intro.component';
 import { NameComponent }        from './name/name.component';
 import { OpenSourceComponent }  from './open_source/open_source.component';
+import { SpinnerComponent }     from './spinner/spinner.component';
 
 @NgModule({
   bootstrap: [ AppComponent ],
@@ -13,7 +14,8 @@ import { OpenSourceComponent }  from './open_source/open_source.component';
     AppComponent,
     IntroComponent,
     NameComponent,
-    OpenSourceComponent
+    OpenSourceComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

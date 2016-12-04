@@ -6,7 +6,7 @@ describe('Name', () => {
     TestBed.configureTestingModule({ declarations: [NameComponent]});
   });
 
-  it ('should work', () => {
+  it ('is created', () => {
     let fixture = TestBed.createComponent(NameComponent);
 
     expect(fixture.componentInstance instanceof NameComponent)
