@@ -30,10 +30,8 @@ describe('Intro', () => {
     let fixture = TestBed.createComponent(IntroComponent);
     let element = fixture.nativeElement.querySelector('.bio');
 
-    expect(element.innerText).toEqual(
-      'I build applications in Ruby on Rails and AngularJS in TDD style. ' +
-      'I like learning new things, which lately has been Elixir, Phoenix and ' +
-      'Angular 2.'
+    expect(element.innerText).toContain(
+      'I build web applications in Ruby on Rails and AngularJS.'
     );
   });
 
