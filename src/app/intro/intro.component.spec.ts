@@ -65,10 +65,10 @@ describe('Intro', () => {
     expect(element).not.toBeNull();
   });
 
-  it ('link to til', () => {
-    let fixture = TestBed.createComponent(IntroComponent);
-    let element = fixture.nativeElement.querySelector('.til');
+  // it ('link to til', () => {
+  //   let fixture = TestBed.createComponent(IntroComponent);
+  //   let element = fixture.nativeElement.querySelector('.til');
 
-    expect(element).not.toBeNull();
-  });
+  //   expect(element).not.toBeNull();
+  // });
 });
