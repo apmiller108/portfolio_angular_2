@@ -15,7 +15,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['', '.ts', '.js']
+        extensions: ['.ts', '.js']
     },
 
     module: {
@@ -26,27 +26,28 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html'
+                loader: 'html-loader'
             },
             {
                 test: /\.(png|jpe?g|gif)$/,
-                loader: 'file?name=assets/[name].[hash].[ext]'
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
             },
             {
                 test: /\.(svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file?name=assets/[name].[hash].[ext]'
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
             },
             {
-                test: /\.css$/, loader: "style-loader!css-loader"
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 loaders: [
-                    'exports-loader?module.exports.toString()', 
-                    'css', 
-                    'resolve-url', 
-                    'sass?sourceMap'
+                    'exports-loader?module.exports.toString()',
+                    'css-loader',
+                    'resolve-url-loader',
+                    'sass-loader?sourceMap'
                 ]
             }
         ]
@@ -61,6 +62,13 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: 'src/_redirects' }
-        ])
+        ]),
+        new webpack.ContextReplacementPlugin(
+                /angular(\\|\/)core(\\|\/)@angular/,
+            helpers.root('src'),
+            {
+                // your Angular Async Route paths relative to this root directory
+            }
+        ),
     ]
 };
