@@ -9,6 +9,7 @@
         "removeComments": false,
         "noImplicitAny": true,
         "lib": ["es5", "dom"],
+        "skipLibCheck": true,
         "suppressImplicitAnyIndexErrors": true,
         "exclude": [
             "node_modules"
