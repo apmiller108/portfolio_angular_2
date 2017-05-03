@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./name.component.scss']
 })
 
-export class NameComponent {}
+export class NameComponent {
+    public browser: String;
+    constructor() {
+        this.browser = navigator.userAgent;
+    }
+}
