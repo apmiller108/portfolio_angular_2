@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class NameComponent {
-    public browser: String;
+    public isChrome: boolean;
+    public userAgent: string;
     constructor() {
-        this.browser = navigator.userAgent;
+        this.userAgent = navigator.userAgent;
+        this.isChrome = /Chrome/.test(this.userAgent);
     }
 }
