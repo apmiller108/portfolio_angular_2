@@ -1,16 +1,27 @@
-<div class="polygons">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
-<div class="row center-xs name-container">
-  <div class="col-xs-6 name">
-    alex
+<div class="polygon-name" *ngIf="supportsClipPath">
+  <div class="polygons">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
-  <div class="col-xs-6 name">
-    miller
+  <div class="row center-xs name-container">
+    <div class="col-xs-6 name">
+      alex
+    </div>
+    <div class="col-xs-6 name">
+      miller
+    </div>
+  </div>
+</div>
+<div class="initials-container" *ngIf="!supportsClipPath">
+  <div class="initials">
+    <div class="front">
+      <span>A</span><span>M</span>
+    </div>
+  </div>
+  <div class="name full-name">
+    alex miller
   </div>
 </div>
 
