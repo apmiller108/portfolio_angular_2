@@ -1,8 +1,11 @@
 @import '../../assets/styles/variables';
 
+.name {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
 .name-container {
   div {
-    text-transform: uppercase;
     letter-spacing: 15px;
   }
   div:nth-child(1) {
@@ -10,6 +13,17 @@
   }
   div:nth-child(2) {
     text-align: left
+  }
+}
+.initials-container {
+  letter-spacing: 15px;
+  .front {
+    span:nth-child(1) {
+      color: $blue;
+    }
+    span:nth-child(2) {
+      color: $red;
+    }
   }
 }
 
@@ -29,8 +43,8 @@
       &:nth-child(#{$i}) {
         $tdelay: ((($i*0.1))+0.2s);
         $tduration: ($i*0.05 + 0.5s);
-        transition-delay: $tdelay;				        
-        transition-duration: $tduration;   
+        transition-delay: $tdelay;
+        transition-duration: $tduration;
       }
     }
   }
