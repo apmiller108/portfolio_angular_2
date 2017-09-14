@@ -31,7 +31,7 @@ describe('Intro', () => {
     let element = fixture.nativeElement.querySelector('.bio');
 
     expect(element.innerText).toContain(
-      'I build web applications in Ruby on Rails and AngularJS.'
+      'I build web applications in Ruby and Angular.'
     );
   });
 
@@ -62,11 +62,4 @@ describe('Intro', () => {
 
     expect(element).not.toBeNull();
   });
-
-  // it ('link to til', () => {
-  //   let fixture = TestBed.createComponent(IntroComponent);
-  //   let element = fixture.nativeElement.querySelector('.til');
-
-  //   expect(element).not.toBeNull();
-  // });
 });

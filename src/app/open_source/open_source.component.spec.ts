@@ -20,13 +20,13 @@ describe('Name', () => {
     expect(element.innerText).toMatch('back');
   });
 
-  it ('has a title link to Angular 2 Webpack Starter repo', () => {
+  it ('has a title link to astronomania-api', () => {
     let fixture = TestBed.createComponent(OpenSourceComponent);
     let element = fixture.nativeElement.querySelector(
-      'h2 > a[href="https://github.com/apmiller108/angular2_webpack_starter"]'
+      'h2 > a[href="https://github.com/apmiller108/astronomania-api"]'
     );
 
-    expect(element.innerText).toMatch('Angular 2 Webpack Starter');
+    expect(element.innerText).toMatch('Astronomania Ruby on Rails API');
   });
 
   it ('has a title link to Google Sheets Appendroid ruby gem page', () => {
@@ -54,7 +54,7 @@ describe('Name', () => {
     );
 
     expect(elements['0'].getAttribute('href')).
-      toMatch('https://github.com/apmiller108/angular2_webpack_starter');
+      toMatch('https://github.com/apmiller108/astronomania-api');
     expect(elements['1'].getAttribute('href')).
       toMatch('https://github.com/apmiller108/google_sheets_appendroid');
     expect(elements['2'].getAttribute('href')).
