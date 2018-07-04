@@ -2,7 +2,7 @@ import { TestBed }          from '@angular/core/testing';
 import { AppComponent }     from './app.component';
 import { IntroComponent }   from './intro/intro.component';
 import { NameComponent }    from './name/name.component';
-import { OpenSourceComponent } from './open_source/open_source.component';
+// import { OpenSourceComponent } from './open_source/open_source.component';
 import { AppRoutingModule } from './app-routing.module';
 import {APP_BASE_HREF}      from '@angular/common';
 
@@ -12,8 +12,8 @@ describe('App', () => {
       declarations: [
         AppComponent,
         IntroComponent,
-        NameComponent,
-        OpenSourceComponent
+        NameComponent
+        // OpenSourceComponent
       ],
       imports: [AppRoutingModule],
       providers: [

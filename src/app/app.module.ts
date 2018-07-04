@@ -5,7 +5,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent }         from './app.component';
 import { IntroComponent }       from './intro/intro.component';
 import { NameComponent }        from './name/name.component';
-import { OpenSourceComponent }  from './open_source/open_source.component';
+// import { OpenSourceComponent }  from './open_source/open_source.component';
 
 @NgModule({
   bootstrap: [ AppComponent ],
@@ -13,7 +13,7 @@ import { OpenSourceComponent }  from './open_source/open_source.component';
     AppComponent,
     IntroComponent,
     NameComponent,
-    OpenSourceComponent,
+    // OpenSourceComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,7 @@ describe('Intro', () => {
     let element = fixture.nativeElement.querySelector('.bio');
 
     expect(element.innerText).toContain(
-      'I build web applications in Ruby and Angular.'
+      "I'm a Ruby developer living in South Florida."
     );
   });
 
@@ -56,10 +56,10 @@ describe('Intro', () => {
     expect(element).not.toBeNull();
   });
 
-  it ('link to open source projects', () => {
-    let fixture = TestBed.createComponent(IntroComponent);
-    let element = fixture.nativeElement.querySelector('.open-source');
+  // it ('link to open source projects', () => {
+  //   let fixture = TestBed.createComponent(IntroComponent);
+  //   let element = fixture.nativeElement.querySelector('.open-source');
 
-    expect(element).not.toBeNull();
-  });
+  //   expect(element).not.toBeNull();
+  // });
 });
